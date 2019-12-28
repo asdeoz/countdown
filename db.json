@@ -1,0 +1,24 @@
+{
+  "events": [
+    {
+      "title": "Do something A",
+      "date": "2020-06-15T00:00:00.000Z",
+      "id": "1"
+    },
+    {
+      "title": "Do something B",
+      "date": "2020-02-27T13:45:00.000Z",
+      "id": "2"
+    },
+    {
+      "title": "Do something C",
+      "date": "2020-02-01T01:00:00.000Z",
+      "id": "3"
+    },
+    {
+      "title": "Do something X",
+      "date": "2020-04-18T08:59:00.000Z",
+      "id": "4"
+    }
+  ]
+}
