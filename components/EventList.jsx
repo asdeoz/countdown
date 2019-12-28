@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Text, FlatList, StyleSheet } from 'react-native';
+import React, { useState, useCallback } from 'react';
+import { FlatList, StyleSheet } from 'react-native';
+import { useFocusEffect } from 'react-navigation-hooks';
 import ActionButton from 'react-native-action-button';
 import useInterval from '../UseInterval';
 import EventCard from './EventCard';
@@ -16,10 +17,11 @@ export default function EventList({ navigation }) {
   });
 
   const [events, setEvents] = useState([]);
-
-  useEffect(() => {
+  const fetchEvents = useCallback(() => {
     getEvents().then(events => setEvents(events));
   }, []);
+
+  useFocusEffect(fetchEvents);
 
   useInterval(() => {
     setEvents(events => (

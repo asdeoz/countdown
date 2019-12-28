@@ -19,6 +19,16 @@
       "title": "Do something X",
       "date": "2020-04-18T08:59:00.000Z",
       "id": "4"
+    },
+    {
+      "title": "Some new event",
+      "date": "2020-01-06T19:36:03.000Z",
+      "id": "eHK2mpY"
+    },
+    {
+      "title": "NYE",
+      "date": "2019-12-31T19:00:39.000Z",
+      "id": "UXQoJ8r"
     }
   ]
 }

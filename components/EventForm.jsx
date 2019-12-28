@@ -9,7 +9,7 @@ import {
 import { useTheme } from 'react-navigation';
 
 import DateTimePickerModal from './DateTimePickerModal';
-import { formatDateTime } from '../api';
+import { formatDateTime, saveEvent } from '../api';
 
 export default function EventForm({ navigation }) {
   const styles = StyleSheet.create({
@@ -51,7 +51,8 @@ export default function EventForm({ navigation }) {
   const [showDatePicker, setShowDatePicker] = useState(false);
 
   const handleAddPress = () => {
-    navigation.navigate('List');
+    saveEvent({ title: eventTitle, date: eventDate })
+      .then(() => navigation.goBack());
   };
 
   const handleDatePress = () => {
