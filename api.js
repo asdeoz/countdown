@@ -1,10 +1,11 @@
 import moment from 'moment';
-import Expo from 'expo';
+import Constants from 'expo-constants';
 
-const { manifest } = Expo.Constants;
-const api = manifest.packagerOpts.dev
-  ? manifest.debuggerHost.split(':').shift().concat(':3000')
-  : 'production url';
+const { manifest } = Constants;
+// const api = (manifest.packagerOpts || {}).dev
+//   ? manifest.debuggerHost.split(':').shift().concat(':3000')
+//   : 'production url';
+const api = '5053407f.ngrok.io'
 
 const url = `http://${api}/events`;
 
